@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<script> src="Distant_Stroke.otf" </script>
+
+<style>
+	body {
+	    background-image: url("backgrounds/share_tryout.png");
+	    background-size: cover; 
+	    width: 100%;
+	    height:100%;
+
+}
+.button{
+    padding-left: 20px;
+    padding-right:100px;
+    padding-top: 90px;
+ }
+.button_image{
+     padding:30px;
+     width:10%; 
+    height:auto;
+    -webkit-transform: rotate(-20deg);
+}
+.share_methods{
+	position:absolute;
+	bottom:0px;
+	float:left;
+	width:20%;
+	height:auto;
+
+}
+
+#add-bottoms{
+       float: left;
+}
+#add-shoes {
+      float:left;
+}
+.filebutton{
+
+}
+.t-shirt_holder{
+	color: #D4AF37;
+	font-family: "Courier New";
+	position: absolute;
+    top:20%;
+    width:20%;
+    max-height:45%;
+    padding-left: 22%;
+    font-size: 40px;
+}
+.pants_holder{
+	position: absolute;
+	top:20%;
+    width:20%;
+    max-height:45%;
+    padding-left: 49%;
+    font-size: 40px;
+}
+.shoes_holder{
+	position: absolute;
+	top:20%;
+    width:20%;
+    max-height:45%;
+    padding-left: 74%;
+    font-size: 40px;
+}
+h2{
+	color: #D4AF37;
+	font-family: "Courier New";
+	position: absolute;
+	float:top;
+    top:-4%;
+    padding-left: 22%;
+    font-size: 40px;
+}
+h3{
+	color: #D4AF37;
+	font-family: "Courier New";
+	position: absolute;
+	float:top;
+    top:-5%;
+    padding-left: 54%;
+    font-size: 40px;
+}
+h4{
+	color: #D4AF37;
+	font-family: "Courier New";
+	position: absolute;
+	float:top;
+    top:-7%;
+    padding-left: 74%;
+    font-size: 40px;
+}
+#email{
+	left:0%;
+}
+#social{
+	right:0%;
+}
+#Imessage{
+	left:40%;
+}
+	}
+
+</style>
+<div id="tops">
+            <h2> Tops and <br> Dresses</h2>
+            <img class = "t-shirt_holder" src = "button/topdresshere_button.jpg">
+</div>
+<div id="bottoms">
+            <h3>Bottoms</h3>
+            <img class = "pants_holder" src = "button/bottomshere_button.jpg">
+</div>
+<div id="shoes">
+            <h4>Shoes and <br> Accesories</h4>
+            <img class = "shoes_holder" src = "button/shoeshere1_button.jpg">
+</div>
+<a href="index.html" class="butt" id="Go_Home">
+     <img class = "button_image" src = "button/hangerz.png">
+</a>
+<br>
+<a href="mailto:?subject=Check Out My Outfit of the Day!&amp;body=Like this outfit?" class="button" id="Share-by-Email">
+     <img class = "share_methods" src = "button/emaillogo.png" id = "email">
+        </a>
+
+<a href="imessage://your@appleid.com" class="button" id="Send iMessage to a Mac">
+     <img class = "share_methods" src = "button/imessage-logo.png" id = "Imessage">
+</a>
+<a href="social.html" class="button" id="Go_to_social_media_options">
+     <img class = "share_methods" src = "button/social_media_logo.png" id = "social">
+</a>
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+if (!localStorage.ootd) {
+    localStorage.ootd = JSON.stringify(["","",""]);
+}
+var ootds = JSON.parse(localStorage.ootd);
+var $topotd = $('.t-shirt_holder')[0];
+var $bottomotd = $('.pants_holder')[0];
+var $shoesotd = $('.shoes_holder')[0];
+// var $sharebyemail = $('#Share-by-Email')[0];
+// console.log($sharebyemail);
+
+if (ootds[0] != ""){
+    $topotd.src = ootds[0];
+    //$sharebyemail.href += "Here's My Top Of The Day!<br>"+ootds[0]+"<br>";
+}
+else {
+    $topotd.src = "bottom/topdresshere_button.jpg";
+}
+if (ootds[1] != ""){
+    $bottomotd.src = ootds[1];
+    //$sharebyemail.href += "Here are My Bottoms Of The Day!<br>"+ootds[1]+"<br>";
+}
+else {
+    $bottomotd.src = "button/bottomshere_button.jpg";
+}
+if (ootds[2] != ""){
+    $shoesotd.src = ootds[2];
+    //$sharebyemail.href += "Here are My Shoes/Accesories Of The Day!<br>"+ootds[2]+"<br>";
+}
+else {
+    $shoesotd.src = "button/shoeshere1_button.jpg";
+}
+</script>
+
